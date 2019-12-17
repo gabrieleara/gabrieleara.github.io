@@ -1,0 +1,106 @@
+// ----------------------- VARIABLES -----------------------
+// I find myslef more comfortable with these default settings
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/*********************** HOLY GRAIL ***********************/
+
+$page-width: 1024px;
+
+// Use this to center page content when wider than the
+// maximum page-width supplied
+@mixin center-page-content($max-width : $page-width) {
+  max-width: $page-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Minimum height to viewport, horizontally centered
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  @include center-page-content;
+}
+
+// Stretch if smaller
+body > .content {
+  flex: 1 0 auto;
+}
+
+// Do not shrink
+footer {
+  flex-shrink: 0;
+}
+
+/************************* THEMES *************************/
+
+@import 'themes';
+
+/* Set default theme variables */
+:root {
+  @include theme-default;
+}
+
+// TODO: A WAY TO FORCE NOT TO USE DARK THEME/LIGHT THEME, SOME BUTTON
+
+/* Fallback to dark theme as default when dark color scheme is preferred. */
+@media screen and (prefers-color-scheme: dark) {
+
+  :root {
+    @include theme('dark');
+
+  }
+}
+
+body {
+  font-family: sans-serif;
+  color: var(--text);
+  background-color: var(--backg);
+}
+
+.card {
+  background-color: var(--backg-card);
+}
+
+/************************* LINKS **************************/
+
+// Default:
+// - no decoration for any link (if not inherited)
+// - disabled links will look like normal text
+a {
+  text-decoration: inherit;
+  outline: none;
+  transition: color 0.2s ease;
+}
+
+// Enabled links
+a:link,
+a:visited {
+  color: var(--accent-light);
+}
+
+// Hover on enabled links
+a:link:hover,
+a:visited:hover,
+a:link:active,
+a:visited:active {
+  color: var(--accent);
+  // TODO: what to do when the background is not the standard one for a link
+}
+
+// When an a link is the only child,
+// it will fill its container
+a:only-child {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+/************************ SANDBOX *************************/
+
+footer {
+  margin-bottom: 20px;
+}

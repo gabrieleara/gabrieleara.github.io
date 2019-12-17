@@ -1,0 +1,12 @@
+{
+    "editor.tabSize": 2,
+    "spellright.language": [
+        "English (American)",
+        "Italian"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ]
+}

@@ -1,0 +1,16 @@
+<header>
+  <nav id="topnav">
+    <div>
+      <a id="logo" href="/">Gabriele Ara</a>
+      &nbsp;
+      <span class="sublogo">is a PhD Student</span>
+    </div>
+    {% comment %} The navigation is built from the _data/navigation.yml file {% endcomment %}
+    <ul>
+      {% for item in site.data.navigation %}
+        <li><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
+      {% endfor %}
+    </ul>
+    <span id="mainnavicon"><i class="icofont-compass icofont-lg"></i></span>
+  </nav>
+</header>

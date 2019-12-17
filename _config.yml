@@ -1,1 +1,39 @@
-theme: jekyll-theme-cayman
+collections:
+  authors:
+    output: true
+    permalink: /blog/authors/:name
+  publications:
+    output: true
+    permalink: /publications/:name
+
+# Sets the default layout for the various types of pages:
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "publications"
+    values:
+      layout: "publication"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+timezone: Italy/Rome
+encoding: utf-8
+collections_dir: collections
+theme: null # Disables default theme from GitHub Pages

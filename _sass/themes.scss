@@ -1,0 +1,79 @@
+// Simple single-color palette
+$color-primary-0: #AA3939;
+$color-primary-1: #FFAAAA;
+$color-primary-2: #D46A6A;
+$color-primary-3: #801515;
+$color-primary-4: #550000;
+
+// Light theme
+$backg:             white;
+$backg-card:        white;
+$foreg:             #121212;
+$light:             rgba($foreg, 0.5);
+$accent:            $color-primary-3;
+$accent-light:      $color-primary-0;
+
+// Dark theme
+$dark-backg:        #030303;
+$dark-backg-card:   $foreg;
+$dark-foreg:        $backg;
+$dark-light:        rgba($dark-foreg, 0.5);
+$dark-accent:       $color-primary-3;
+$dark-accent-light: $color-primary-0;
+
+// TODO: shadows colors
+$themes: (
+  light: (
+    // logo: url("../images/brand/logo_vertical.svg"),
+    backg:          $backg,
+    backg-card:     $backg-card,
+    foreg:          $foreg,
+    text:           $foreg,
+    text-secondary: $light,
+    accent:         $accent,
+    accent-light:   $accent-light,
+    link:           $accent-light,
+    hover:          $accent,
+    border:         transparent, // TODO
+  ),
+  dark: (
+    // logo: url("../images/brand/logo_vertical--invert.svg"),
+    backg:          $dark-backg,
+    backg-card:     $dark-backg-card,
+    foreg:          $dark-foreg,
+    text:           $dark-foreg,
+    text-secondary: $dark-light,
+    accent:         $dark-accent,
+    accent-light:   $dark-accent-light,
+    link:           $dark-accent-light,
+    hover:          $dark-accent,
+    border:         transparent, // TODO
+  ),
+);
+
+// Declares all the variables in the theme
+@mixin theme($name) {
+  $the-theme: map-get($themes, '#{$name}');
+
+  @each $key, $value in $the-theme {
+    --#{$key}: #{$value};
+  }
+}
+
+// Declares all the variables in default theme
+@mixin theme-default {
+  @include theme('light');
+}
+
+// Defines all the themes, each with its own class
+// Classes are used only to set variables
+@mixin define-themes() {
+  @each $theme-name, $theme in $themes {
+    .theme-#{$theme-name} {
+      @include theme('#{$theme-name}');
+    }
+  }
+}
+
+// With this command, I am here expanding each theme
+@include define-themes();
