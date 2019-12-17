@@ -1,0 +1,17 @@
+// TODO:
+
+$standard-easing: cubic-bezier(0.4, 0.0, 0.2, 1);
+$decelerate-easing: cubic-bezier(0.0, 0.0, 0.2, 1);
+$accelerate-easing: cubic-bezier(0.4, 0.0, 1, 1);
+
+@mixin quick-size-transition-expand {
+  transition-property: height, width, max-width, max-height;
+  transition-duration: .300s;
+  transition-timing-function: $decelerate-easing;
+}
+
+@mixin quick-size-transition-collapse {
+  transition-property: height, width, max-width, max-height;
+  transition-duration: .250s;
+  transition-timing-function: $decelerate-easing;
+}
