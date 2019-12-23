@@ -21,3 +21,6 @@ serve-drafts:
 
 clean:
 	$(CMD_CLEAN)
+
+install-dep:
+	./install-dep.sh
