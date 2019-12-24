@@ -3,7 +3,6 @@
 // For position: relative or absolute remember to put content-box and try it out
 * {
   box-sizing: border-box;
-  margin: 0;
 }
 
 /*********************** HOLY GRAIL ***********************/
@@ -25,6 +24,7 @@ body {
   width: 100vw;
   flex-direction: column;
   background-color: var(--backg);
+  margin: 0;
 }
 
 // Stretch if smaller
@@ -36,6 +36,7 @@ body > .content {
 body > header,
 body > footer {
   flex-shrink: 0;
+  margin: 0;
 }
 
 // First elements in body have always full page width
