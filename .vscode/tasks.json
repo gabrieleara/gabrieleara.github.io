@@ -27,10 +27,8 @@
     {
       "label": "Drafts",
       "type": "shell",
-      "command": "make drafts-serve",
-      "group": {
-        "kind": "test"
-      },
+      "command": "make serve-drafts",
+      "group": "test",
       "isBackground": true,
       "problemMatcher": ["$jekyll-error-watch", "$jekyll-warning-watch"]
     },

@@ -1,4 +1,4 @@
-.PHONY: build serve drafts serve-drafts clean
+.PHONY: build serve drafts serve-drafts clean install-dep
 
 CMD_JEKYLL		= bundle exec jekyll
 CMD_BUILD		= $(CMD_JEKYLL) build
@@ -21,3 +21,6 @@ serve-drafts:
 
 clean:
 	$(CMD_CLEAN)
+
+install-dep:
+	./install-dep.sh

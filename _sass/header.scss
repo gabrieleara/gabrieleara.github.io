@@ -1,9 +1,14 @@
+header * {
+  margin: 0;
+}
+
 #topnav {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   margin: 1em;
-  padding: 1em 0em 1em 0em;
+  padding: 0 1em;
+  @include center-page-content;
 }
 
 #topnav div {
