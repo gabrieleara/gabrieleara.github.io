@@ -57,14 +57,12 @@ body > * > * {
 
 @import 'themes';
 
-/* Set default theme variables */
+// Set default theme variables (i.e. light theme)
 :root {
   @include theme-default;
 }
 
-// TODO: A WAY TO FORCE NOT TO USE DARK THEME/LIGHT THEME, SOME BUTTON
-
-/* Fallback to dark theme as default when dark color scheme is preferred. */
+// Fallback to dark theme as default when dark color scheme is preferred.
 @media screen and (prefers-color-scheme: dark) {
 
   :root {
@@ -72,8 +70,21 @@ body > * > * {
   }
 }
 
+// The following two classes, when added to the <html> element
+// force the use of either one theme or the other, independently from system settings
+
+// Overrides the theme with the light theme
+:root.force-light {
+  @include theme('light');
+}
+
+// Overrides the theme with the dark theme
+:root.force-dark {
+  @include theme('dark');
+}
+
 body {
-  font-family: sans-serif;
+  font-family: Inter, sans-serif; /* TODO: fix this */
   color: var(--text);
   background-color: var(--backg);
 }

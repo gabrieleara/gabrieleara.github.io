@@ -21,7 +21,7 @@ $dark-light:        rgba($dark-foreg, 0.5);
 $dark-accent:       $color-primary-3;
 $dark-accent-light: $color-primary-0;
 
-// TODO: shadows colors
+// TODO: shadow colors
 $themes: (
   light: (
     // logo: url("../images/brand/logo_vertical.svg"),
@@ -34,7 +34,7 @@ $themes: (
     accent-light:   $accent-light,
     link:           $accent-light,
     hover:          $accent,
-    border:         transparent, // TODO
+    border:         transparent, // TODO: fix this?
   ),
   dark: (
     // logo: url("../images/brand/logo_vertical--invert.svg"),
