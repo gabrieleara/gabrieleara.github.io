@@ -12,13 +12,19 @@
         "isDefault": true
       },
       "isBackground": true,
-      "problemMatcher": ["$jekyll-error-watch", "$jekyll-warning-watch"]
+      "problemMatcher": [
+        "$jekyll-error-watch",
+        "$jekyll-warning-watch"
+      ]
     },
     {
       "label": "Build",
       "type": "shell",
       "command": "make build",
-      "problemMatcher": ["$jekyll-error", "$jekyll-warning"],
+      "problemMatcher": [
+        "$jekyll-error",
+        "$jekyll-warning"
+      ],
       "group": {
         "kind": "build",
         "isDefault": true
@@ -30,7 +36,10 @@
       "command": "make serve-drafts",
       "group": "test",
       "isBackground": true,
-      "problemMatcher": ["$jekyll-error-watch", "$jekyll-warning-watch"]
-    },
+      "problemMatcher": [
+        "$jekyll-error-watch",
+        "$jekyll-warning-watch"
+      ]
+    }
   ]
 }
