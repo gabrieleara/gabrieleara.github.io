@@ -1,60 +1,51 @@
 <!DOCTYPE html>
-<html>
+<!-- FIXME: class here added only for development purposes-->
+<html class="force-light">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Just another developer personal page">
+  <meta name="description" content="{{ page.description }}">
   <meta name="author" content="Gabriele Ara">
 
-  <!-- Content Data -->
+  <!-- -------------- CONTENT DATA BEGIN --------------- -->
   <title>{{ page.title }}</title>
+  <!-- --------------- CONTENT DATA END ---------------- -->
 
-  <!-- Stylesheets -->
+  <!-- --------------- STYLESHEETS BEGIN --------------- -->
   <link rel="stylesheet" href="/assets/css/styles.css">
-  <!-- <link rel="stylesheet" href="/assets/css/font-awesome.min.css"> -->
 
   <!-- Fonts -->
-  <!-- <link rel="stylesheet" href="/assets/css/icofont.min.css"> -->
+  {% comment %} TODO: Fix this mess {% endcomment %}
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="/assets/css/fonts/Icofont/icofont.min.css">
 
-  <!-- Scripts -->
+  <!-- ---------------- STYLESHEETS END ---------------- -->
 
-  <!-- TODO: ANALYTICS CAN BE INCLUDED ONLY IN PRODUCTION THIS WAY -->
-  {% if jekyll.environment == "production" %}
-    <script src="my-analytics-script.js"></script>
-  {% endif %}
+  <!-- ---------------- FAVICONS BEGIN ----------------- -->
+  {% include favicon.html %}
+  <!-- ----------------- FAVICONS END ------------------ -->
 
-  <!-- FAVICONS -->
-  <link rel="icon" type="ico" href="/assets/images/ico/favicon.ico" />
-  <link rel="shortcut icon" type="image/x-icon" href="/assets/images/ico/favicon.ico">
-  <!--
-  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/images/ico/apple-touch-icon-57x57.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/ico/apple-touch-icon-114x114.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/ico/apple-touch-icon-72x72.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/ico/apple-touch-icon-144x144.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/assets/images/ico/apple-touch-icon-60x60.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/assets/images/ico/apple-touch-icon-120x120.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/assets/images/ico/apple-touch-icon-76x76.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/images/ico/apple-touch-icon-152x152.png" />
-  <link rel="icon" type="image/png" href="/assets/images/ico/favicon-196x196.png" sizes="196x196" />
-  <link rel="icon" type="image/png" href="/assets/images/ico/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/png" href="/assets/images/ico/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="/assets/images/ico/favicon-16x16.png" sizes="16x16" />
-  <link rel="icon" type="image/png" href="/assets/images/ico/favicon-128.png" sizes="128x128" />
-  <meta name="application-name" content="Gabriele Ara - Website"/>
-  <meta name="msapplication-TileColor" content="#FFFFFF" />
-  <meta name="msapplication-TileImage" content="/assets/images/ico/mstile-144x144.png" />
-  <meta name="msapplication-square70x70logo" content="/assets/images/ico/mstile-70x70.png" />
-  <meta name="msapplication-square150x150logo" content="/assets/images/ico/mstile-150x150.png" />
-  <meta name="msapplication-wide310x150logo" content="/assets/images/ico/mstile-310x150.png" />
-  <meta name="msapplication-square310x310logo" content="/assets/images/ico/mstile-310x310.png" />
-  -->
+  {% comment %}
+  <!-- -------------- FEED SUPPORT BEGIN --------------- -->
 
-  <!-- Feed Support: Coming Soon -->
+  <!-- Coming Soon -->
   <!-- <link href='/feed.xml' rel='alternate' type='application/atom+xml'> -->
   {% feed_meta %}
   {% seo %}
+  <!-- --------------- FEED SUPPORT END ---------------- -->
+  {% endcomment %}
+
+  <!-- ------------- CUSTOM SCRIPTS BEGIN -------------- -->
+  <!-- -------------- CUSTOM SCRIPTS END --------------- -->
+
+  {% comment %} With this trick, I add Analytics only in production code {% endcomment %}
+  {% if jekyll.environment == "production" %}
+  <!-- --------------- Analytics Script ---------------- -->
+  <script src="my-analytics-script.js"></script>
+  {% endif %}
 </head>
+
 <body>
   {% include header.html %}
 
@@ -66,4 +57,5 @@
 
   {% include footer.html %}
 </body>
+
 </html>
