@@ -1,25 +1,32 @@
 // Simple single-color palette
-$color-primary-0: #AA3939;
-$color-primary-1: #FFAAAA;
-$color-primary-2: #D46A6A;
-$color-primary-3: #801515;
-$color-primary-4: #550000;
+$color-light-primary-0: #AA3939;
+$color-light-primary-1: #FFAAAA;
+$color-light-primary-2: #D46A6A;
+$color-light-primary-3: #801515;
+$color-light-primary-4: #550000;
+
+// Simple single-color palette (for dark)
+$color-dark-primary-0: lighten(#009999, 10%);
+$color-dark-primary-1: lighten(#46B2B2, 10%);
+$color-dark-primary-2: lighten(#249F9F, 10%);
+$color-dark-primary-3: lighten(#007676, 10%);
+$color-dark-primary-4: lighten(#005D5D, 10%);
 
 // Light theme
-$backg:             #f0f0f0;
+$backg:             white;
 $backg-card:        white;
 $foreg:             #121212;
 $light:             rgba($foreg, 0.5);
-$accent:            $color-primary-3;
-$accent-light:      $color-primary-0;
+$accent:            $color-light-primary-3;
+$accent-light:      $color-light-primary-0;
 
 // Dark theme
 $dark-backg:        #030303;
 $dark-backg-card:   $foreg;
 $dark-foreg:        $backg;
 $dark-light:        rgba($dark-foreg, 0.5);
-$dark-accent:       $color-primary-3;
-$dark-accent-light: $color-primary-0;
+$dark-accent:       $color-dark-primary-2;
+$dark-accent-light: $color-dark-primary-0;
 
 // TODO: shadow colors
 $themes: (
