@@ -4,34 +4,53 @@
 </div>
 
 <script>
-  // TODO: icon should be some sort of tri-state thing, not a toggle like this
-  function site_theme_toggle() {
+  (function (global) {
+    // Read stored theme, if any, and set site theme accordingly on page load
+    let stored_theme = global.localStorage.getItem("stored_theme");
     let root = document.querySelector('html');
-    console.log(root);
 
-    if (hasClass(root, 'force-light')) {
+    if (stored_theme == 'light') {
+      addClass(root, 'force-light');
+      return;
+    }
+    if (stored_theme == 'dark') {
+      addClass(root, 'force-dark');
+      return;
+    }
+
+    global.localStorage.setItem("stored_theme", 'system');
+  }(window));
+
+  function site_theme_toggle() {
+    let stored_theme = window.localStorage.getItem("stored_theme");
+    let root = document.querySelector('html');
+
+    if (stored_theme == 'system') {
+      // Retrieve system preference first
+      let mql = window.matchMedia('screen and (prefers-color-scheme: dark)');
+      if (mql.matches) {
+        stored_theme = 'dark';
+      } else {
+        stored_theme = 'light';
+      }
+    }
+
+    if (stored_theme == 'light') {
       // Change to dark and exit
       removeClass(root, 'force-light');
       addClass(root, 'force-dark');
+      window.localStorage.setItem("stored_theme", 'dark');
       return;
     }
 
-    if (hasClass(root, 'force-dark')) {
-      // Change to light and exit
+    if (stored_theme == 'dark') {
+      // Change to dark and exit
       removeClass(root, 'force-dark');
       addClass(root, 'force-light');
+      window.localStorage.setItem("stored_theme", 'light');
       return;
     }
 
-    // Query the current preference
-    let mql = window.matchMedia('screen and (prefers-color-scheme: dark)');
-    if (mql.matches) {
-      // Dark originally preferred, switch to light
-      addClass(root, 'force-light');
-    } else {
-      // Light originally preferred, switch to dark
-      addClass(root, 'force-dark');
-    }
-
+    console.log("Error: unexpected stored_theme value: ", stored_theme);
   }
 </script>
