@@ -11,5 +11,15 @@
     ],
     "terminal.integrated.shellArgs.linux": [
         "-l"
-    ]
+    ],
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "html.format.endWithNewline": true,
+    "editor.rulers": [
+        60,
+        80
+    ],
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 30000,
+    "editor.renderWhitespace": "all"
 }
