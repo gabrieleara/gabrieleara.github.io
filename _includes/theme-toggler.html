@@ -1,0 +1,37 @@
+<div class="theme-toggler" onclick="site_theme_toggle()">
+  <i class="icofont-sun-alt"></i>
+  <i class="icofont-night"></i>
+</div>
+
+<script>
+  // TODO: icon should be some sort of tri-state thing, not a toggle like this
+  function site_theme_toggle() {
+    let root = document.querySelector('html');
+    console.log(root);
+
+    if (hasClass(root, 'force-light')) {
+      // Change to dark and exit
+      removeClass(root, 'force-light');
+      addClass(root, 'force-dark');
+      return;
+    }
+
+    if (hasClass(root, 'force-dark')) {
+      // Change to light and exit
+      removeClass(root, 'force-dark');
+      addClass(root, 'force-light');
+      return;
+    }
+
+    // Query the current preference
+    let mql = window.matchMedia('screen and (prefers-color-scheme: dark)');
+    if (mql.matches) {
+      // Dark originally preferred, switch to light
+      addClass(root, 'force-light');
+    } else {
+      // Light originally preferred, switch to dark
+      addClass(root, 'force-dark');
+    }
+
+  }
+</script>

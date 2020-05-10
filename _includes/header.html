@@ -1,16 +1,53 @@
-<header>
+<header id="mainheader">
+  <div class="pic">
+    <img src="/assets/images/profile.jpg" />
+  </div>
+  <div class="banner">
+    <a href="/">Gabriele Ara</a>
+    <span>&nbsp;is a PhD Student</span>
+  </div>
   <nav id="topnav">
-    <div>
-      <a id="logo" href="/">Gabriele Ara</a>
-      &nbsp;
-      <span class="sublogo">is a PhD Student</span>
-    </div>
     {% comment %} The navigation is built from the _data/navigation.yml file {% endcomment %}
-    <ul>
+    <span class="menu" onclick="topnav_menu_toggle()">menu</span>
+    <ul class="l1-list">
       {% for item in site.data.navigation %}
-      <li><a href="{{ item.link }}" {% if page.url == item.link %}class="current" {% endif %}>{{ item.name }}</a></li>
+      <li {% if page.url == item.link %}class="current" {% endif %}><a href="{{ item.link }}">{{ item.name }}</a></li>
       {% endfor %}
     </ul>
-    <span id="mainnavicon"><i class="icofont-compass icofont-lg"></i></span>
   </nav>
 </header>
+
+<script>
+  function hasClass(el, className) {
+    if (el.classList)
+      return el.classList.contains(className);
+    return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
+  }
+
+  function addClass(el, className) {
+    if (el.classList)
+      el.classList.add(className)
+    else if (!hasClass(el, className))
+      el.className += " " + className;
+  }
+
+  function removeClass(el, className) {
+    if (el.classList)
+      el.classList.remove(className)
+    else if (hasClass(el, className)) {
+      var reg = new RegExp('(\\s|^)' + className + '(\\s|$)');
+      el.className = el.className.replace(reg, ' ');
+    }
+  }
+
+  function topnav_menu_toggle() {
+    var menu = document.querySelector('#mainheader nav .menu');
+
+    if (hasClass(menu, 'active')) {
+      removeClass(menu, 'active');
+    } else {
+      addClass(menu, 'active');
+    }
+  }
+
+</script>

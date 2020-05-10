@@ -45,7 +45,7 @@ body > * {
 }
 
 // Their direct children are the actual content,
-// which is limited to a certain maximum valye
+// which is limited to a certain maximum value
 body > * > * {
   padding-left: 1em;
   padding-right:1em;
@@ -64,7 +64,6 @@ body > * > * {
 
 // Fallback to dark theme as default when dark color scheme is preferred.
 @media screen and (prefers-color-scheme: dark) {
-
   :root {
     @include theme('dark');
   }
@@ -84,7 +83,7 @@ body > * > * {
 }
 
 body {
-  font-family: Inter, sans-serif; /* TODO: fix this */
+  font-family: Inter, sans-serif; // TODO: fix this
   color: var(--text);
   background-color: var(--backg);
 }
@@ -92,6 +91,8 @@ body {
 .card {
   background-color: var(--backg-card);
 }
+
+@import 'theme-toggler';
 
 /************************* LINKS **************************/
 

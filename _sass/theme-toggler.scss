@@ -1,0 +1,77 @@
+/******************* THEME TOGGLE BEGIN *******************/
+
+$textsize: 2em;
+$togglesize: 1.3em;
+$padding: 0;
+$position: 0.5em;
+
+.theme-toggler {
+  width: #{$togglesize};
+  height: #{$togglesize};
+  line-height: #{$textsize};
+  font-size: #{$textsize};
+  border-radius: 50%;
+
+  position: fixed;
+  top: #{$position};
+  right: #{$position};
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.theme-toggler:hover {
+  cursor: pointer;
+  color: var(--backg);
+  background-color: var(--foreg);
+}
+
+.theme-toggler * {
+  // Center vertically
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  // Center horizontally
+  margin: 0 auto;
+  padding: 0;
+}
+
+// DEFAULT BEHAVIOR
+// Default: light theme, the icon for the moon should be displayed
+.theme-toggler .icofont-sun-alt {
+  display: none;
+}
+.theme-toggler .icofont-night {
+  display: block;
+}
+
+// Fallback to dark theme as default when dark color scheme is preferred.
+@media screen and (prefers-color-scheme: dark) {
+  .theme-toggler .icofont-sun-alt {
+    display: block;
+  }
+  .theme-toggler .icofont-night {
+    display: none;
+  }
+}
+
+// FORCED BEHAVIOR
+:root.force-light {
+  .theme-toggler .icofont-sun-alt {
+    display: none;
+  }
+  .theme-toggler .icofont-night {
+    display: block;
+  }
+}
+:root.force-dark {
+  .theme-toggler .icofont-sun-alt {
+    display: block;
+  }
+  .theme-toggler .icofont-night {
+    display: none;
+  }
+}
+
+/******************** THEME TOGGLE END ********************/

@@ -1,6 +1,6 @@
-#- name: Home
-#  link: /
-#- name: Publications
-#  link: /publications
-#- name: Blog
-#  link: /blog
+- name: Home
+  link: /
+# - name: Publications
+#   link: /publications
+# - name: Blog
+#   link: /blog
