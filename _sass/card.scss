@@ -1,0 +1,23 @@
+/*********************** CARD BEGIN ***********************/
+
+.card {
+  background-color: var(--backg-card);
+  color: var(--text);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 1px 2px var(--shadow-2);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card > :first-child,
+.card > :first-child :first-child {
+  margin-top: 0;
+}
+
+.card > :last-child,
+.card > :last-child :last-child {
+  margin-bottom: 0;
+}
+
+/************************ CARD END ************************/

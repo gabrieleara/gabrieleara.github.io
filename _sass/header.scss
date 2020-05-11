@@ -10,29 +10,29 @@
 }
 
 #mainheader > * {
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   @include center-page-content;
 }
 
 #mainheader > :first-child {
-  margin-top: 1em;
+  margin-top: 1rem;
 }
 
 #mainheader > :last-child {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 /* ---------------------- PICTURE ----------------------- */
 
 #mainheader .pic {
-  width: 8em;
-  height: 8em;
+  width: 8rem;
+  height: 8rem;
   position: relative;
   overflow: hidden;
   border-radius: 50% 50%;
   padding: 0;
-  line-height: 8em;
+  line-height: 8rem;
 }
 
 #mainheader .pic img {
@@ -45,10 +45,10 @@
 /* --------------- NAME AND QUALIFICATION --------------- */
 
 #mainheader .banner {
-  font-size: 1.2em;
+  font-size: var(--font-size-h4);
   display: flex;
   flex-flow: row wrap;
-  height: 1.5em; // FIXME: I don't like this too much
+  height: calc(1.01 * var(--font-size-h3));
   overflow: hidden;
   align-items: baseline;
   justify-content: center;
@@ -57,8 +57,8 @@
 $mainname: "#mainheader .banner a";
 
 #{$mainname} {
-  font-weight: bold;
-  font-size: 1.5em;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-h3);
   color: var(--color-foreg);
   box-shadow: 0 3px black;
 }
@@ -72,13 +72,10 @@ $topnav: "#mainheader nav";
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  text-transform: uppercase;
-  font-size: 0.9em;
-  letter-spacing: 0.05em;
 
   > * {
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   > :first-child {
@@ -90,10 +87,9 @@ $topnav: "#mainheader nav";
   }
 
   .menu {
-    border-radius: 5px;
-    border: 2px solid var(--foreg);
-    padding: 0.75em 1.5em;
+    padding: 0.75rem 1.5rem;
     display: none;
+    @extend .button;
   }
 
   .menu:hover,
@@ -112,13 +108,10 @@ $topnav: "#mainheader nav";
     display: flex;
 
     > * {
-      border-radius: 5px;
+      @extend .button;
+      border-color: transparent;
       color: var(--link);
       background-color: rgba(255, 255, 255, 0);
-    }
-
-    > * > * {
-      padding: 0.75em 1.5em;
     }
 
     > :hover,
@@ -138,16 +131,16 @@ $topnav: "#mainheader nav";
     justify-content: center;
 
     li {
-      margin-left: 2em;
-      margin-right: 2em;
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
 
     li:first-child {
-      margin-left: 0em;
+      margin-left: 0rem;
     }
 
     li:last-child {
-      margin-right: 0em;
+      margin-right: 0rem;
     }
   }
 
@@ -173,8 +166,8 @@ $topnav: "#mainheader nav";
       justify-content: flex-start;
 
       li {
-        margin-top: 0.5em;
-        margin-bottom: 0.5em;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
         margin-left: 0;
         margin-right: 0;
       }

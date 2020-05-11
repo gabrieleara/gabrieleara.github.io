@@ -1,0 +1,55 @@
+---
+---
+#about-profile {
+  float: right;
+  width: 35%;
+}
+
+#about-profile::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#about-profile .square {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  
+}
+
+#about-profile .square:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+
+}
+
+#about-profile img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+}
+
+#about-profile figcaption {
+  margin-top: 1em;
+  text-align: left;
+}
+
+// FIXME: absolute arbitrary number
+@media screen and (max-width: 700px) {
+  #about-profile {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #about-profile .square {
+    border-radius: 50%;
+    width: 60%;
+    margin: auto;
+  }
+}

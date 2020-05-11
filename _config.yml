@@ -37,3 +37,5 @@ timezone: Italy/Rome
 encoding: UTF-8
 collections_dir: collections
 theme: null # Disables default theme from GitHub Pages
+
+exclude: [README.md, install-dep.sh, Makefile, Gemfile, Gemfile.lock]

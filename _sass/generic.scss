@@ -1,17 +1,45 @@
-// ----------------------- VARIABLES -----------------------
+@import "normalize";
+
 // I find myself more comfortable with these default settings
 // For position: relative or absolute remember to put content-box and try it out
 * {
   box-sizing: border-box;
 }
 
+@import "typography";
+
+button,
+.button {
+  border-radius: 0.3rem;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border: 2px solid var(--foreg);
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+    color: var(--backg);
+    background: var(--hover);
+    outline: none;
+    outline-offset: -4px;
+    border-color: transparent;
+}
+
+button:active,
+.button:active {
+    transform: scale(1);
+}
+
 /*********************** HOLY GRAIL ***********************/
 
-$page-width: 1024px;
+$page-width: 60rem;
 
 // Use this to center page content when wider than the
 // maximum page-width supplied
-@mixin center-page-content($max-width : $page-width) {
+@mixin center-page-content($max-width: $page-width) {
   max-width: $page-width;
   margin-left: auto;
   margin-right: auto;
@@ -25,6 +53,8 @@ body {
   flex-direction: column;
   background-color: var(--backg);
   margin: 0;
+
+  overflow-x: hidden;
 }
 
 // Stretch if smaller
@@ -47,15 +77,15 @@ body > * {
 // Their direct children are the actual content,
 // which is limited to a certain maximum value
 body > * > * {
-  padding-left: 1em;
-  padding-right:1em;
-  margin: 1em;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin: 1rem;
   @include center-page-content;
 }
 
 /************************* THEMES *************************/
 
-@import 'themes';
+@import "themes";
 
 // Set default theme variables (i.e. light theme)
 :root {
@@ -65,7 +95,7 @@ body > * > * {
 // Fallback to dark theme as default when dark color scheme is preferred.
 @media screen and (prefers-color-scheme: dark) {
   :root {
-    @include theme('dark');
+    @include theme("dark");
   }
 }
 
@@ -74,25 +104,24 @@ body > * > * {
 
 // Overrides the theme with the light theme
 :root.force-light {
-  @include theme('light');
+  @include theme("light");
 }
 
 // Overrides the theme with the dark theme
 :root.force-dark {
-  @include theme('dark');
+  @include theme("dark");
 }
 
 body {
-  font-family: Inter, sans-serif; // TODO: fix this
   color: var(--text);
   background-color: var(--backg);
 }
 
-.card {
-  background-color: var(--backg-card);
+.light {
+  color: var(--text-secondary);
 }
 
-@import 'theme-toggler';
+@import "theme-toggler";
 
 /************************* LINKS **************************/
 
@@ -122,11 +151,11 @@ a:visited:active {
 
 // When an a link is the only child,
 // it will fill its container
-a:only-child {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-}
+// a:only-child {
+//   display: inline-block;
+//   width: 100%;
+//   height: 100%;
+// }
 
 /************************ SANDBOX *************************/
 

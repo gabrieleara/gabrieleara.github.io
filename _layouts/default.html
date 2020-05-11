@@ -8,16 +8,18 @@
   <meta name="author" content="Gabriele Ara">
 
   <!-- -------------- CONTENT DATA BEGIN --------------- -->
-  <title>{{ page.title }}</title>
+  <title>{{ page.title }} - Gabriele Ara</title>
   <!-- --------------- CONTENT DATA END ---------------- -->
 
   <!-- --------------- STYLESHEETS BEGIN --------------- -->
-  <link rel="stylesheet" href="/assets/css/styles.css">
-
   <!-- Fonts -->
   {% comment %} TODO: Fix this mess {% endcomment %}
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   <link rel="stylesheet" href="/assets/css/fonts/Icofont/icofont.min.css">
+
+  <!-- Page styles -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/{{ page.custom_style }}">
 
   <!-- ---------------- STYLESHEETS END ---------------- -->
 
@@ -37,6 +39,9 @@
 
   <!-- ------------- CUSTOM SCRIPTS BEGIN -------------- -->
   <script src="/assets/script/utility.js"></script>
+  {% if page.custom_script %}
+  <script src="/assets/script/{{ page.custom_script }}"></script>
+  {% endif %}
   <!-- -------------- CUSTOM SCRIPTS END --------------- -->
 
   {% comment %} With this trick, I add Analytics only in production code {% endcomment %}

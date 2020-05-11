@@ -1,0 +1,160 @@
+/******************** TYPOGRAPHY BEGIN ********************/
+
+/* ----------- FONTS USED ----------- */
+
+body {
+  font-family: Inter, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Inter, sans-serif;
+}
+
+/* -------- FONT PROPERTIES -------- */
+
+body {
+  --font-size: 16px;
+  --font-size-small: 0.9rem;
+  --font-size-smaller: 0.8rem;
+
+  --font-size-h1: 2.4rem;
+  --font-size-h2: 1.76rem;
+  --font-size-h3: 1.56rem;
+  --font-size-h4: 1.3rem;
+  --font-size-h5: 1.13rem;
+  --font-size-h6: 1.05rem;
+
+  --font-weight-normal: 400;
+  --font-weight-lbold: 500;
+  --font-weight-bold: 700;
+  --font-weight-bolder: 900;
+
+  --letter-spacing-normal: 0;
+  --letter-spacing-close: -0.05rem;
+  --letter-spacing-closer: -0.05rem;
+  --letter-spacing-large: 0.04rem;
+  --letter-spacing-larger: 0.07rem;
+
+  font-size: var(--font-size);
+  font-weight: var(--font-weight-normal);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.text-small {
+  font-size: var(--font-size-small);
+  letter-spacing: var(--letter-spacing-large);
+}
+
+.subtitle1 {
+  font-size: var(--font-size);
+  font-weight: var(--font-weight-normal);
+  letter-spacing: var(--letter-spacing-large);
+}
+.subtitle2 {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-normal);
+  letter-spacing: var(--letter-spacing-large);
+}
+
+.button,
+button {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-normal);
+  letter-spacing: var(--letter-spacing-larger);
+  text-transform: uppercase;
+}
+
+.overline {
+  font-size: var(--font-size-smaller);
+  font-weight: var(--font-weight-lbold);
+  letter-spacing: var(--letter-spacing-large);
+  text-transform: uppercase;
+}
+
+.caption {
+  font-size: var(--font-size-smaller);
+  font-weight: var(--font-weight-normal);
+  letter-spacing: var(--letter-spacing-large);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-lbold);
+  letter-spacing: var(--letter-spacing-closer);
+}
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-lbold);
+  letter-spacing: var(--letter-spacing-close);
+}
+h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-lbold);
+  letter-spacing: var(--letter-spacing-normal);
+}
+h4 {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-lbold);
+  letter-spacing: var(--letter-spacing-larger);
+}
+h5 {
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-normal);
+}
+h6 {
+  font-size: var(--font-size-h6);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-large);
+}
+
+header:not(:first-child) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 2rem;
+  }
+}
+
+h1:not(:first-child),
+h2:not(:first-child),
+h3:not(:first-child),
+h4:not(:first-child),
+h5:not(:first-child),
+h6:not(:first-child) {
+  margin-top: 2rem;
+}
+
+/* ---------------- RELATIONSHIPS ---------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  + .subtitle1,
+  + .subtitle2 {
+    display: block;
+    position: relative;
+  }
+}
+
+h1 + .subtitle1,
+h1 + .subtitle2 {
+  top: -1.5em; // FIXME: this should probably change depending on the heading
+}
+
+h2 + .subtitle1,
+h2 + .subtitle2 {
+  top: -1rem; // FIXME: this should probably change depending on the heading
+}
+
+/********************* TYPOGRAPHY END *********************/

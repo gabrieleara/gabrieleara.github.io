@@ -2,7 +2,14 @@
   <div id="mainfooter">
     {% comment %} NOTE: Place content inside this block, not directly in the footer {% endcomment %}
 
-    This will become a proper footer.
+    <div class="footerrow">
+      <div class="contact">
+        Get in touch with me:
+        <span class="email_address">substitute <em>gabriele</em> and <em>ara</em> in
+          <em>{name.surname}@santannapisa.it</em></span>
+        <span class="doit">Should I do it for you? &nbsp; <button onclick="substitute_email()">Please do</button></span>
+      </div>
+    </div>
     {% comment %}
     Get in touch with me:
     <ul>
@@ -16,4 +23,41 @@
     </ul>
     {% endcomment %}
   </div>
+
+  <script>
+    function substitute_email() {
+      // Remove the button once used
+      var doit = document.querySelector('#mainfooter .contact .doit');
+      doit.remove();
+
+      // Substitute to the mailto address
+      var email_address = document.querySelector('#mainfooter .contact .email_address');
+      var children = email_address.childNodes;
+      
+      var strings = [];
+      for (let i = children.length - 1; i >= 0; i--) {
+        if (children[i].nodeName.toLowerCase() == 'em') {
+          strings.unshift(children[i].childNodes[0]);
+        }
+      }
+
+      var name = strings[0].wholeText;
+      var surname = strings[1].wholeText;
+      var address = strings[2].wholeText;
+
+      address = address.replace('name', name);
+      address = address.replace('surname', surname);
+      address = address.replace('{', '');
+      address = address.replace('}', '');
+
+      // At this point add the mailto
+      var a = document.createElement('a');
+      var linkText = document.createTextNode(address);
+      a.appendChild(linkText);
+      // a.title = "";
+      a.href = "mailto:" + address;
+      email_address.parentNode.appendChild(a);
+      email_address.remove();
+    }
+  </script>
 </footer>

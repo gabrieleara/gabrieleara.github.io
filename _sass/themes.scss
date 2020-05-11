@@ -6,32 +6,36 @@ $color-light-primary-3: #801515;
 $color-light-primary-4: #550000;
 
 // Simple single-color palette (for dark)
-$color-dark-primary-0: lighten(#009999, 10%);
-$color-dark-primary-1: lighten(#46B2B2, 10%);
-$color-dark-primary-2: lighten(#249F9F, 10%);
-$color-dark-primary-3: lighten(#007676, 10%);
-$color-dark-primary-4: lighten(#005D5D, 10%);
+$color-dark-primary-0: lighten(#009999, 25%);
+$color-dark-primary-1: lighten(#46B2B2, 25%);
+$color-dark-primary-2: lighten(#249F9F, 5%);
+$color-dark-primary-3: lighten(#007676, 5%);
+$color-dark-primary-4: lighten(#005D5D, 5%);
 
 // Light theme
-$backg:             white;
-$backg-card:        white;
+$backg:             #F0F2F5;
+$backg-card:        #FFFFFF;
 $foreg:             #121212;
-$light:             rgba($foreg, 0.5);
+$light:             #65676B;
 $accent:            $color-light-primary-3;
 $accent-light:      $color-light-primary-0;
+$shadow-1-light:   rgba(0, 0, 0, 0.1);
+$shadow-2-light:   rgba(0, 0, 0, 0.2);
+$shadow-3-light:   rgba(0, 0, 0, 0.5);
 
 // Dark theme
-$dark-backg:        #030303;
-$dark-backg-card:   $foreg;
-$dark-foreg:        $backg;
-$dark-light:        rgba($dark-foreg, 0.5);
-$dark-accent:       $color-dark-primary-2;
-$dark-accent-light: $color-dark-primary-0;
+$dark-backg:        #18191A;
+$dark-backg-card:   #242526;
+$dark-foreg:        #E4E6EB;
+$dark-light:        #B0B3B8;
+$dark-accent:       $color-dark-primary-0;
+$dark-accent-light: $color-dark-primary-2;
+$shadow-1-dark:    rgba(255, 255, 255, 0.1);
+$shadow-2-dark:    rgba(255, 255, 255, 0.2);
+$shadow-3-dark:    rgba(255, 255, 255, 0.5);
 
-// TODO: shadow colors
 $themes: (
   light: (
-    // logo: url("../images/brand/logo_vertical.svg"),
     backg:          $backg,
     backg-card:     $backg-card,
     foreg:          $foreg,
@@ -41,10 +45,11 @@ $themes: (
     accent-light:   $accent-light,
     link:           $accent-light,
     hover:          $accent,
-    border:         transparent, // TODO: fix this?
+    shadow-1:       $shadow-1-light,
+    shadow-2:       $shadow-2-light,
+    shadow-3:       $shadow-3-light,
   ),
   dark: (
-    // logo: url("../images/brand/logo_vertical--invert.svg"),
     backg:          $dark-backg,
     backg-card:     $dark-backg-card,
     foreg:          $dark-foreg,
@@ -52,9 +57,12 @@ $themes: (
     text-secondary: $dark-light,
     accent:         $dark-accent,
     accent-light:   $dark-accent-light,
-    link:           $dark-accent-light,
-    hover:          $dark-accent,
+    link:           $dark-accent,
+    hover:          $dark-accent-light,
     border:         transparent, // TODO
+    shadow-1:       $shadow-1-dark,
+    shadow-2:       $shadow-2-dark,
+    shadow-3:       $shadow-3-dark,
   ),
 );
 

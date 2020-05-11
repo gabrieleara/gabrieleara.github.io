@@ -1,0 +1,31 @@
+.toc {
+  display: inline-block;
+  background-color: var(--backg);
+  padding: 1rem 4rem 1rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 2px var(--shadow-3);
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0px;
+  }
+
+  ul {
+    list-style: none;
+    font-size: var(--font-size-h5);
+    line-height: 2em;
+    margin: 0;
+  }
+
+  ul li:before {
+    font-family: "Icofont";
+    content: "\ea5d";
+    margin-left: -2rem;
+    margin-right: 1rem;
+    font-size: var(--font-size-h5);
+  }
+}
