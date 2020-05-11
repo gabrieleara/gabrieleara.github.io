@@ -130,16 +130,16 @@ $topnav: "#mainheader nav";
     align-items: baseline;
     justify-content: center;
 
-    li {
+    > * {
       margin-left: 1rem;
       margin-right: 1rem;
     }
 
-    li:first-child {
+    > :first-child {
       margin-left: 0rem;
     }
 
-    li:last-child {
+    > :last-child {
       margin-right: 0rem;
     }
   }
@@ -165,18 +165,18 @@ $topnav: "#mainheader nav";
       align-items: center;
       justify-content: flex-start;
 
-      li {
+      > * {
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
         margin-left: 0;
         margin-right: 0;
       }
 
-      li:first-child {
+      > :first-child {
         margin-top: 0;
       }
 
-      li:last-child {
+      > :last-child {
         margin-bottom: 0;
       }
     }
