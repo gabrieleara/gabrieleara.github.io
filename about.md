@@ -60,7 +60,7 @@ Check out my [publications](/publications) page for some of the works I contribu
 
 ## Prior Work Experience
 
-On "odd" years (2013, 2015, 2017, 2019) I typically work as an independent contract author for [Zanichelli editore](www.zanichelli.it) (Italy).
+On "odd" years (2013, 2015, 2017, 2019) I typically work as an independent contract author for [Zanichelli editore](http://www.zanichelli.it) (Italy).
 In the past I collaborated this way to a number of projects, authoring some chapters for high-school textbooks and manuals regarding the essentials of mobile application development for Android OS. Refer to my [publications list](/publications) for the full list of my contributions.
 
 Between October 2018 and June 2019, during my senior year as a master student, I worked as a (part-time) high-school teacher for the [Istituto di Istruzione Superiore "Vespucci-Colombo"](http://vespucci.edu.it/), Livorno (Italy), teaching IT and IT Laboratory for the school year 2018-2019 to both 10<sup>th</sup> and 11<sup>th</sup> grade students.
