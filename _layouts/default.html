@@ -19,7 +19,9 @@
 
   <!-- Page styles -->
   <link rel="stylesheet" href="/assets/css/styles.css">
+  {% if page.custom_style %}
   <link rel="stylesheet" href="/assets/css/{{ page.custom_style }}">
+  {% endif %}
 
   <!-- ---------------- STYLESHEETS END ---------------- -->
 
