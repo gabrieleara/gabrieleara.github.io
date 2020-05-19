@@ -33,12 +33,14 @@
   border-radius: 50% 50%;
   padding: 0;
   line-height: 8rem;
+  background-color: var(--foreg);
 }
 
 #mainheader .pic img {
   position: absolute;
-  top: -35%;
-  width: 100%;
+  top: -15%;
+  width: 110%;
+  transform: translateX(-5%);
   height: auto;
 }
 
