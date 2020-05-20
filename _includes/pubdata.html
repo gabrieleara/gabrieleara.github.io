@@ -31,7 +31,7 @@
 >
 {% if print_award and the_data.award and the_data.award != blank %}
 <a class='pub-award-link button' href='{{ the_data.award_link }}' style='font-size: var(--font-size-smaller);'>
-  <span class="pub-award">{{ the_data.award }}</span>
+  <span class="pub-award" style='position: relative; bottom: 0.15em'><i class="icofont-badge icofont-2x" style='position: relative; top:0.15em;'></i>&#32;{{ the_data.award }}</span>
 </a>
 {% endif %}
 <span class='pub-authors'>{{ the_data.authors }}</span>

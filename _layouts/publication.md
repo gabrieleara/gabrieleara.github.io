@@ -35,7 +35,7 @@ layout: carded
   <h1>Publication Details</h1>
 {% if page.award %}
   <a class='award-link button' href='{{ page.award_link }}'>
-    <div class="award" style="display:inline">{{ page.award }}</div>
+    <span class="award" style='position: relative; bottom: 0.25em'><i class="icofont-badge icofont-2x" style='position: relative; top:0.15em;'></i>&#32;{{ page.award }}</span>
   </a>
 {% endif %}
 </header>
