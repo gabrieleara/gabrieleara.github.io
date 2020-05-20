@@ -17,10 +17,16 @@ layout: carded
 
 .pub-header h1 {
   margin-top: 0 !important;
+  margin-right: 1rem;
 }
 
 .award-link {
-  margin: 1em auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.award-link:hover {
+  color: var(--backg) !important;
 }
 
 </style>
@@ -28,8 +34,8 @@ layout: carded
 <header class='pub-header' style='display: flex; justify-content: space-between;'>
   <h1>Publication Details</h1>
 {% if page.award %}
-  <a class='award-link' href='{{ page.award_link }}'>
-    <div class="award button" style="display:inline">{{ page.award }}</div>
+  <a class='award-link button' href='{{ page.award_link }}'>
+    <div class="award" style="display:inline">{{ page.award }}</div>
   </a>
 {% endif %}
 </header>
