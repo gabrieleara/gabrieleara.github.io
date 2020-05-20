@@ -89,6 +89,21 @@ body > * > * {
 
 @import "themes";
 
+.background404 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-size: 300px;
+  background-position: 0 0;
+  background-repeat: repeat;
+  opacity: .08;
+  background-image: url($backg404-light);
+  z-index: -1;
+  pointer-events: none;
+}
+
 // Set default theme variables (i.e. light theme)
 :root {
   @include theme-default;
@@ -99,6 +114,11 @@ body > * > * {
   :root {
     @include theme("dark");
   }
+
+  .background404 {
+    opacity: .02;
+    background-image: url($backg404-dark);
+  }
 }
 
 // The following two classes, when added to the <html> element
@@ -107,11 +127,21 @@ body > * > * {
 // Overrides the theme with the light theme
 :root.force-light {
   @include theme("light");
+
+  .background404 {
+    opacity: .08;
+    background-image: url($backg404-light);
+  }
 }
 
 // Overrides the theme with the dark theme
 :root.force-dark {
   @include theme("dark");
+
+  .background404 {
+    opacity: .02;
+    background-image: url($backg404-dark);
+  }
 }
 
 body {

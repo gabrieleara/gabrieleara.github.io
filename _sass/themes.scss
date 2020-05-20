@@ -34,6 +34,9 @@ $shadow-1-dark:    rgba(255, 255, 255, 0.1);
 $shadow-2-dark:    rgba(255, 255, 255, 0.2);
 $shadow-3-dark:    rgba(255, 255, 255, 0.5);
 
+$backg404-light: "../images/stars-black.svg";
+$backg404-dark: "../images/stars-white.svg";
+
 $themes: (
   light: (
     backg:          $backg,
@@ -48,6 +51,7 @@ $themes: (
     shadow-1:       $shadow-1-light,
     shadow-2:       $shadow-2-light,
     shadow-3:       $shadow-3-light,
+    backg404:       $backg404-light,
   ),
   dark: (
     backg:          $dark-backg,
@@ -63,6 +67,7 @@ $themes: (
     shadow-1:       $shadow-1-dark,
     shadow-2:       $shadow-2-dark,
     shadow-3:       $shadow-3-dark,
+    backg404:       $backg404-dark,
   ),
 );
 
