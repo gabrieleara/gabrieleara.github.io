@@ -113,6 +113,10 @@ h6 {
   letter-spacing: var(--letter-spacing-large);
 }
 
+p {
+  line-height: 150%;
+}
+
 header:not(:first-child) {
   h1,
   h2,

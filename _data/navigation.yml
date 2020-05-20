@@ -1,8 +1,11 @@
 - name: Home
+  section: home
   link: /
 - name: About me
+  section: about
   link: /about
 - name: Publications
+  section: publications
   link: /publications
 # - name: Blog
 #   link: /blog

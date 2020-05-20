@@ -13,7 +13,7 @@
     <span class="menu" onclick="topnav_menu_toggle()">menu</span>
     <ul class="l1-list">
       {% for item in site.data.navigation %}
-      <a {% if page.link == item.link %}class="current" {% endif %} href="{{ item.link }}"><li>{{ item.name }}</li></a>
+      <a {% if page.section == item.section %}class="current" {% endif %} href="{{ item.link }}"><li>{{ item.name }}</li></a>
       {% endfor %}
     </ul>
   </nav>

@@ -1,6 +1,6 @@
 ---
 section: about
-layout: carded
+layout: article
 title: About me
 link: /about
 custom_style: about.css

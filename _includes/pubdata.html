@@ -1,0 +1,89 @@
+{% capture pubdataWorkspace %}
+    {% comment %}
+        Version 0.1
+
+        Usage:
+            {% include pubdata.html thedata=data link=true %}
+
+        Parameters:
+            * thedata      (map) - the reference to the data related to the publication
+
+        Optional Parameters:
+            * link         (bool)   : false  - print a link to the article in the article title
+            * award        (bool)   : false  - print a badge to show an award if available
+            * class        (string) :   ''   - a CSS class assigned to the publication tag
+            * id           (string) :   ''   - an ID to assigned to the publication tag
+
+        Output:
+            A paragraph containing the publication citation in simil-APA style
+    {% endcomment %}
+
+    {% capture output %}{% endcapture %}
+    {% assign the_data = include.thedata %}
+    {% assign use_link = include.link | default: false %}
+    {% assign print_award = include.award | default: false %}
+
+{% comment %} DO NOT INDENT {% endcomment %}
+{% capture output %}
+<p
+  {% if include.class and include.class != blank %}class="{{ include.class }}"{% endif%}
+  {% if include.id and include.id != blank %}id="{{ include.id }}"{% endif%}
+>
+{% if print_award and the_data.award and the_data.award != blank %}
+<a class='pub-award-link button' href='{{ the_data.award_link }}' style='font-size: var(--font-size-smaller);'>
+  <span class="pub-award">{{ the_data.award }}</span>
+</a>
+{% endif %}
+<span class='pub-authors'>{{ the_data.authors }}</span>
+<span class='pub-date'>{% if the_data.custom_date %}&#32;({{ the_data.custom_date }}){% endif %}</span>
+,&#32;
+<!---->
+<span class='pub-title'>
+"<strong>
+{% if use_link %}
+<a href='{{ the_data.url }}'>
+{% endif %}
+
+{{ the_data.title }}
+
+{% if use_link %}
+</a>
+{% endif %}
+</strong>".
+</span>
+<!---->
+&#32;
+<!---->
+{% if the_data.custom_date and the_data.custom_date != blank %}
+In
+{% else %}
+(To appear) in
+{% endif %}
+&#32;
+<!---->
+<span class="pub-name">{{ the_data.publication_name }}</span>
+{% if the_data.book %}
+,&#32;
+<em><span class="pub-book">{{ the_data.book }}</span></em>
+{% endif %}
+<!---->
+{% if the_data.pages and the_data.pages != blank %}
+&#32;
+<span class='pub-pages'>({{ the_data.pages }})</span>
+{% endif %}
+<!---->
+{% if the_data.editor and the_data.editor != blank %}
+,&#32;
+<span class='pub-editor'>{{ the_data.editor }}</span>
+{% endif %}
+<!---->
+.
+<!---->
+{% if the_data.doi and the_data.doi != blank %}
+&#32;
+<a href='{{ the_data.doi }}'><span class='pub-doi'>{{ the_data.doi }}</span></a>
+{% endif %}
+<!---->
+</p>
+{% endcapture %}
+{% endcapture %}{% assign pubdataWorkspace = '' %}{{ output | strip | strip_newlines }}

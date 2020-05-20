@@ -1,0 +1,51 @@
+---
+section: publications
+layout: default
+title: Publications
+link: /publications
+description: List of my publications
+---
+
+<style>
+
+.pub-award-link {
+  display: block;
+  float: right;
+  margin: 0 0 0.5em 1em;
+  padding: 0.5em 1em;
+  text-align: center;
+  background-color: var(--accent-light);
+  border: 0px solid transparent;
+  border-radius: 0.25em;
+  color: var(--backg) !important;
+}
+.pub-award-link:hover {
+  background-color: var(--accent) !important;
+}
+
+.pub-list .card {
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+}
+</style>
+
+{% assign sorted_pub = site.publications | sort: 'date' | reverse %}
+{% assign publication_types = sorted_pub | map: "publication_type" | uniq | sort | reverse %}
+
+<h1>Publications</h1>
+<div class='pub-list'>
+{% for type in publication_types %}
+  {% case type %}
+    {% when 'conference' %}
+      <h2>Publications on international conference and workshop proceedings</h2>
+    {% when 'bookchapter' %}
+      <h2>Book Chapters</h2>
+  {% endcase %}
+
+  {% for pub in sorted_pub %}
+    {% if pub.publication_type == type %}
+      {% include pubdata.html thedata=pub link=true class='pubentry card' award=true %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+</div>

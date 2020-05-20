@@ -4,29 +4,28 @@ collections:
     permalink: /blog/authors/:name
   publications:
     output: true
-    permalink: /publications/:name
+    permalink: /publications/:path
+    sort_by: date
 
 # Sets the default layout for the various types of pages:
 defaults:
   - scope:
       path: ""
-      type: "authors"
-    values:
-      layout: "author"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-  - scope:
-      path: ""
-      type: "publications"
-    values:
-      layout: "publication"
-  - scope:
-      path: ""
     values:
       layout: "default"
+  - scope:
+      path: "collections/_publications"
+    values:
+      layout: "publication"
+      section: publications
+  - scope:
+      path: "collections/_publications/conferences"
+    values:
+      publication_type: "conference"
+  - scope:
+      path: "collections/_publications/bookchapters"
+    values:
+      publication_type: "bookchapter"
 
 plugins:
   - jekyll-feed
