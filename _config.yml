@@ -1,4 +1,7 @@
 collections:
+  pages:
+    output: true
+    permalink: /:name
   authors:
     output: true
     permalink: /blog/authors/:name
@@ -37,4 +40,4 @@ encoding: UTF-8
 collections_dir: collections
 theme: null # Disables default theme from GitHub Pages
 
-exclude: [README.md, install-dep.sh, Makefile, Gemfile, Gemfile.lock]
+exclude: [README.md, install-dep.sh, Makefile, Gemfile, Gemfile.lock, LICENSE]
