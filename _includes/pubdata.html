@@ -49,11 +49,17 @@
 {% if use_link %}
 </a>
 {% endif %}
-</strong>".
+</strong>"
 </span>
+{% if the_data.thesis and the_data.thesis != blank %}
+&#32;
+<span class='pub-thesis'>({{ the_data.thesis}})</span>
+{% endif %}
 <!---->
+.
 &#32;
 <!---->
+{% if the_data.publication_name and the_data.publication_name != blank %}
 {% if the_data.custom_date and the_data.custom_date != blank %}
 In
 {% else %}
@@ -78,6 +84,7 @@ In
 {% endif %}
 <!---->
 .
+{% endif %}
 <!---->
 {% if the_data.doi and the_data.doi != blank %}
 &#32;

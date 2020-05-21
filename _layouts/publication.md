@@ -76,7 +76,17 @@ layout: carded
 {% endif %}
 
 {% if page.paper_link %}
+{% assign whatisthis = "" %}
+{% case page.publication_type %}
+    {% when 'conference' %}
+      {% assign whatisthis = "paper" %}
+    {% when 'bookchapter' %}
+      {% assign whatisthis = "book chapter" %}
+    {% when 'thesis' %}
+      {% assign whatisthis = "thesis" %}
+{% endcase %}
+
 <a href='{{ page.paper_link }}'>
-    <div class="button" style="display:inline">Download paper</div>
+    <div class="button" style="display:inline">Download {{ whatisthis }}</div>
 </a>
 {% endif %}
