@@ -15,6 +15,6 @@ doi: https://doi.org/10.5220/0009321200440055
 description: This work presents a framework for evaluating the performance of various virtual switching solutions, each widely adopted on Linux to provide virtual network connectivity to containers in high-performance scenarios, like in Network Function Virtualization (NFV). We present results from the use of this framework for the quantitative comparison of the performance of software-based and hardware-accelerated virtual switches on a real platform with respect to a number of key metrics, namely network throughput, latency and scalability.
 paper_link: /assets/documents/papers/CLOSER2020.pdf
 award: Best Paper Award
-award_link: /assets/awards/BPA_CLOSER_2020.pdf
+award_link: /assets/documents/awards/BPA_CLOSER_2020.pdf
 language: eng
 ---
