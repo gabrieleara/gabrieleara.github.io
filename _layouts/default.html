@@ -48,8 +48,7 @@
 
   {% comment %} With this trick, I add Analytics only in production code {% endcomment %}
   {% if jekyll.environment == "production" %}
-  <!-- --------------- Analytics Script ---------------- -->
-  <script src="my-analytics-script.js"></script>
+    {% include analytics.html %}
   {% endif %}
 </head>
 
