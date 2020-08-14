@@ -62,7 +62,7 @@ layout: carded
   }
 </style>
 <div class='award-container'>
-  
+
 </div>-->
 
 
@@ -74,6 +74,15 @@ layout: carded
   {{ page.description }}
 </p>
 {% endif %}
+
+
+{% if page.youtube %}
+<div style="text-align: center; margin: 2em 0 3em">
+  <div style="display: inline;">
+    {{ page.youtube }}
+  </div>
+</div>
+{%endif%}
 
 {% if page.paper_link %}
 {% assign whatisthis = "" %}

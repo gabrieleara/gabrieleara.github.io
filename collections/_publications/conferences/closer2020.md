@@ -17,4 +17,5 @@ paper_link: /assets/documents/papers/CLOSER2020.pdf
 award: Best Paper Award
 award_link: /assets/documents/awards/BPA_CLOSER_2020.pdf
 language: eng
+youtube: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/cQ3ecv6TVZc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ---
