@@ -26,6 +26,10 @@ defaults:
     values:
       publication_type: "conference"
   - scope:
+      path: "collections/_publications/journals"
+    values:
+      publication_type: "journal"
+  - scope:
       path: "collections/_publications/theses"
     values:
       publication_type: "thesis"

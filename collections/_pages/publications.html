@@ -30,7 +30,7 @@ description: List of my publications
 </style>
 
 {% assign sorted_pub = site.publications | sort: 'date' | reverse %}
-{% assign publication_types = "conference,thesis,bookchapter" | split: "," %}
+{% assign publication_types = "journal,conference,thesis,bookchapter" | split: "," %}
 
 <h1>Publications</h1>
 <div class='pub-list'>
@@ -38,6 +38,8 @@ description: List of my publications
   {% case type %}
     {% when 'conference' %}
       <h2>Publications on international conference and workshop proceedings</h2>
+    {% when 'journal' %}
+      <h2>Publications on international journals</h2>
     {% when 'bookchapter' %}
       <h2>Book Chapters</h2>
     {% when 'thesis' %}

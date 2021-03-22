@@ -89,6 +89,8 @@ layout: carded
 {% case page.publication_type %}
     {% when 'conference' %}
       {% assign whatisthis = "paper" %}
+    {% when 'journal' %}
+      {% assign whatisthis = "paper" %}
     {% when 'bookchapter' %}
       {% assign whatisthis = "book chapter" %}
     {% when 'thesis' %}
