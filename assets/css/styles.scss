@@ -1,6 +1,8 @@
 ---
 ---
 
+$baseurl: "{{ site.baseurl }}";
+
 @import 'generic';
 @import 'header';
 @import 'footer';
