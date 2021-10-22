@@ -1,0 +1,111 @@
+{% extends "main.html" %}
+{% from 'partials/pubdata.html' import pubdata %}
+
+{% block styles %}
+
+{{ super() }}
+
+<style>
+  .pub-header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+  }
+
+  .pub-header[dir=rtl] {
+    flex-flow: row-reverse wrap-reverse;
+  }
+
+  .pub-header h1 {
+    margin-top: 0 !important;
+    margin-right: 1rem;
+  }
+
+  .award-link {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .award-link .twemoji {
+    font-size: 1.4em;
+    position: relative;
+    bottom: 0.1em;
+  }
+
+  .upper {
+    text-transform: uppercase;
+  }
+
+  .youtube-container {
+    text-align: center;
+    margin: 2em 0 3em;
+  }
+
+  .youtube-wrapper {
+    display: inline;
+  }
+
+</style>
+{% endblock %}
+
+{% block article_header %}
+<header class='pub-header'>
+  <!-- <h1>Publication Details</h1> -->
+  <h1> {{ page.meta.title }} </h1>
+  {% if page.meta.pubdata.award is not none and page.meta.pubdata.award | length %}
+    <a class="award-link md-button md-button--primary"
+       href="{{ page.meta.pubdata.award_link }}">
+      <span class="twemoji">
+        {% include ".icons/fontawesome/solid/award.svg" %}
+      </span>
+      &#32;
+      {{ page.meta.pubdata.award }}
+    </a>
+  {% endif %}
+</header>
+{% endblock article_header %}
+
+{% block article_body %}
+
+{{ pubdata(page.meta.pubdata, print_award=false) }}
+
+{% if page.meta.pubdata.description is not none and page.meta.pubdata.description | length %}
+<h4>Abstract</h4>
+<p style="position:relative; top:-1em;">
+  {{ page.meta.pubdata.description }}
+</p>
+{% endif %}
+
+{% if page.meta.pubdata.download_link %}
+{% set whatisthis = "" %}
+{% if page.meta.pubdata.type == 'conference' %}
+{% set whatisthis = "paper" %}
+{% elif page.meta.pubdata.type == 'journal' %}
+{% set whatisthis = "paper" %}
+{% elif page.meta.pubdata.type == 'bookchapter' %}
+{% set whatisthis = "book chapter" %}
+{% elif page.meta.pubdata.type == 'thesis' %}
+{% set whatisthis = "thesis" %}
+{% endif %}
+
+<a class='md-button md-button--primary upper'
+   href='{{ page.meta.pubdata.download_link }}'
+   download
+   >
+  Download&#32;{{ whatisthis }}
+</a>
+{% endif %}
+
+{% if page.meta.youtube is not none and page.meta.youtube | length %}
+<div class='youtube-container'>
+  <h3>{{ whatisthis }} Presentation on YouTube</h3>
+  <div class='youtube-wrapper'>
+    {{ page.meta.youtube }}
+  </div>
+</div>
+{% endif %}
+
+{{ super() }}
+{% endblock article_body %}

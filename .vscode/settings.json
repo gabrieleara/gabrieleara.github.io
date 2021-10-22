@@ -1,0 +1,15 @@
+{
+    "editor.tabSize": 2,
+    // "html.format.unformatted": "",
+    // "html.format.contentUnformatted": "",
+    // "html.format.extraLiners": "",
+    "html.format.wrapLineLength": 80,
+    // "html.format.preserveNewLines": true,
+    // "html.format.maxPreserveNewLines": 1,
+    "html.format.endWithNewline": true,
+    "html.format.indentInnerHtml": true,
+    "html.format.wrapAttributes": "force-aligned",
+    "html.format.wrapAttributesIndentSize": null,
+    "html.format.templating": true,
+    "html.format.unformattedContentDelimiter": "<!-- ~~DO NOT FORMAT~~ -->",
+}

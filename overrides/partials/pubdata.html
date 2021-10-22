@@ -1,0 +1,40 @@
+<!-- ~~DO NOT FORMAT~~ -->
+{% macro pubdata(data, use_link=false, print_award=false, class='', id='') %}
+<p {% if class | length %}
+   class='{{ class|e }}'
+   {% endif %}
+   {% if id | length %}
+   id='{{ id|e }}'
+   {% endif %}>
+  {% if print_award and data.award is not none and data.award | length %}
+  <a class="award-link md-button md-button--primary"
+     href="{{ data.award_link }}">
+    <span class="twemoji">
+      {% include ".icons/fontawesome/solid/award.svg" %}
+    </span>
+    &#32;
+    {{ data.award}}
+  </a>
+  {% endif %}
+  <span class='pub-authors'>{{ data.authors }}</span><span class='pub-date'>{% if data.custom_date is not none and data.custom_date | length %}&#32;({{ data.custom_date }}){% endif %}</span>,
+  <span class='pub-title'>
+    "<strong>{% if use_link %}<a href='{{ data.url }}'>{% endif %}{{ data.title }}{% if use_link %}</a>{% endif %}</strong>"</span>{% if data.thesis is not none and data.thesis | length %}&#32;<span class='pub-thesis'>({{ data.thesis}})</span>{% endif %}.
+  &#32;
+  {% if data.publication_name is not none and data.publication_name | length %}
+  {% if data.custom_date is not none and data.custom_date | length %}
+  In
+  {% else %}
+  (To appear) in
+  {% endif %}
+  &#32;
+  <span class="pub-name">{{ data.publication_name }}</span>{% if data.book is not none and data.book | length %},&#32;<em><span class="pub-book">{{ data.book }}</span></em>{% endif %}{% if data.pages is not none and data.pages | length %}&#32;<span class='pub-pages'>({{ data.pages }})</span>{% endif %}{% if data.editor is not none and data.editor | length %},&#32;<span class='pub-editor'>{{ data.editor }}</span>{% endif %}.
+  {% endif %}
+  {% if data.doi is not none and data.doi | length %}
+  <br>
+  <a href='{{ data.doi }}' target="_blank">
+    <span class='pub-doi'>{{ data.doi }}</span>
+  </a>
+  {% endif %}
+</p>
+{%- endmacro %}
+<!-- ~~DO NOT FORMAT~~ -->

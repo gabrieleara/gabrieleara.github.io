@@ -1,0 +1,97 @@
+site_name: Gabriele Ara is an Embedded Engineer
+copyright: Copyright &copy; 2021 Gabriele Ara
+
+# nav:
+#   - Section:
+#     - section/index.md
+#     - Page 1: section/page-1.md
+#     ...
+#     - Page n: section/page-n.md
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - attr_list
+
+plugins:
+  - search
+  # - social
+  # - tags
+  - git-revision-date-localized:
+      type: iso_date
+      enable_creation_date: true
+      fallback_to_build_date: true
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  icon:
+    logo: material/code-greater-than
+
+  features:
+    - navigation.instant
+    - navigation.tracking # don't know if this actually works?
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    # - search.share
+
+  palette:
+    # Light Theme
+    - scheme: default
+      media: "(prefers-color-scheme: light)"
+      primary: teal
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    # Dark Theme
+    - scheme: slate
+      media: "(prefers-color-scheme: dark)"
+      primary: amber
+      accent: pink
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/gabrieleara
+      name: Gabriele Ara on GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://it.linkedin.com/in/gabriele-ara
+      name: Gabriele Ara on LinkedIn
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com/gabriararauna
+      name: Gabriele Ara on Instagram
+
+  analytics:
+    provider: google
+    property: UA-171517172-1
+
+  consent:
+    title: A cookie for you! 🍪
+    description: >
+      Hi! I use cookies to check whether people actually are interested in what
+      i have to say. Please consent, or I will never know if I kept blabbing
+      alone this whole time... :-(
+
+  # alternate:
+  #   # Switch to Italian
+  #   - name: Italian
+  #     link: ./it/
+  #     lang: it
+  #   # Switch to English
+  #   - name: English
+  #     link: ./en/
+  #     lang: en
