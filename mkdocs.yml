@@ -35,7 +35,7 @@ theme:
 
   features:
     - navigation.instant
-    - navigation.tracking # don't know if this actually works?
+    - navigation.tracking # eventually it will work
     - navigation.tabs
     - navigation.sections
     - navigation.expand
