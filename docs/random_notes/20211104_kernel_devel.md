@@ -373,4 +373,4 @@ Happy Linux Kernel Hacking with VS Code! :penguin:
 [url-devcontainer]:
 https://github.com/gabrieleara/dev_environment/blob/kernel/kernel/devcontainer.json
 
-[url-tinyfs]: assets/misc/tinyfs.gz
+[url-tinyfs]: /assets/misc/tinyfs.gz
