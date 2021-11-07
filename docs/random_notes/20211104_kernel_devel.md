@@ -69,7 +69,7 @@ The content of the two files should be the following:
     ```dockerfile
 
     # Base image for the container environment
-    FROM gabrieleara/dev_environments:kernel
+    FROM gabrieleara/dev_environment:kernel
 
     # You can place other dependencies here if you want.
     # The container is a standard debian image, so you can
