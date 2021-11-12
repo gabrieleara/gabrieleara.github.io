@@ -39,8 +39,11 @@
   }
 
   .youtube-container {
-    text-align: center;
     margin: 2em 0 3em;
+  }
+
+  .youtube-center {
+    text-align: center;
   }
 
   .youtube-wrapper {
@@ -98,11 +101,16 @@
 </a>
 {% endif %}
 
-{% if page.meta.youtube is not none and page.meta.youtube | length %}
+{% if page.meta.pubdata.youtube is not none and page.meta.pubdata.youtube | length %}
 <div class='youtube-container'>
-  <h3>{{ whatisthis }} Presentation on YouTube</h3>
-  <div class='youtube-wrapper'>
-    {{ page.meta.youtube }}
+  <h3>
+    <span style='text-transform: capitalize;'>{{ whatisthis }}</span>
+    Presentation on YouTube
+  </h3>
+  <div class='youtube-center'>
+    <div class='youtube-wrapper'>
+      {{ page.meta.pubdata.youtube }}
+    </div>ss
   </div>
 </div>
 {% endif %}
