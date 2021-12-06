@@ -60,6 +60,7 @@ the last question is [42](https://en.wikipedia.org/wiki/Phrases_from_The_Hitchhi
 
 [elf-revshell]: https://blog.lumen.com/no-longer-just-theory-black-lotus-labs-uncovers-linux-executables-deployed-as-stealth-windows-loaders/
 <!-- https://www.theregister.com/2021/09/17/windows_subsystem_for_linux_malware/ -->
+<!-- https://www.bleepingcomputer.com/news/security/new-malware-uses-windows-subsystem-for-linux-for-stealthy-attacks/ -->
 
 [wsl-youtube]: https://www.youtube.com/watch?v=_p3RtkwstNk
 
