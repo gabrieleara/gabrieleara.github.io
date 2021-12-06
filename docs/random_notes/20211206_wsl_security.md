@@ -64,6 +64,12 @@ the last question is [42](https://en.wikipedia.org/wiki/Phrases_from_The_Hitchhi
 
 [wsl-youtube]: https://www.youtube.com/watch?v=_p3RtkwstNk
 
+<!-- https://www.bleepingcomputer.com/news/microsoft/windows-subsystem-for-linux-2-bypasses-the-windows-10-firewall/ -->
+<!-- https://medium.com/@gulfsteve/hacking-with-wsl2-ede3e649e08d -->
+<!-- https://www.youtube.com/watch?v=cPJTp8x-lA4 -->
+
+<!-- https://www.fortinet.com/blog/threat-research/offense-and-defense-a-tale-of-two-sides-bypass-uac -->
+
 <!-- Abbreviations -->
 
 *[WSL]: Windows Subsystem for Linux
