@@ -13,30 +13,34 @@ Following is my list of publications, divided into publication types.
 </div>
 
 <script>
-    const destination = document.getElementById('publist')
-    const sections = document.querySelectorAll('li.md-nav__item--section');
-    sections.forEach(section => {
-        const label = section.querySelector('label.md-nav__link').firstChild.nodeValue.trim();
+    function generate_publist() {
+        const destination = document.getElementById('publist')
+        const sections = document.querySelectorAll('li.md-nav__item--section');
+        sections.forEach(section => {
+            const label = section.querySelector('label.md-nav__link').firstChild.nodeValue.trim();
 
-        const section_title = document.createElement('h2')
-        section_title.appendChild(document.createTextNode(label));
-        destination.appendChild(section_title);
+            const section_title = document.createElement('h2')
+            section_title.appendChild(document.createTextNode(label));
+            destination.appendChild(section_title);
 
-        const elements = section.querySelectorAll('li.md-nav__item');
-        elements.forEach(el => {
-            const link = el.querySelector('a[href]');
-            const text = link.firstChild.nodeValue.trim()
-            const url = link.href.trim()
+            const elements = section.querySelectorAll('li.md-nav__item');
+            elements.forEach(el => {
+                const link = el.querySelector('a[href]');
+                const text = link.firstChild.nodeValue.trim()
+                const url = link.href.trim()
 
-            const link_node = document.createElement('a');
-            link_node.href = url;
-            link_node.appendChild(document.createTextNode(text));
+                const link_node = document.createElement('a');
+                link_node.href = url;
+                link_node.appendChild(document.createTextNode(text));
 
-            const element_node = document.createElement('p');
-            element_node.appendChild(link_node);
-            destination.appendChild(element_node);
+                const element_node = document.createElement('p');
+                element_node.appendChild(link_node);
+                destination.appendChild(element_node);
+            });
         });
-    });
+    }
+
+    generate_publist();
 </script>
 
 <style>
