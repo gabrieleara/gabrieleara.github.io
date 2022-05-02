@@ -5,8 +5,19 @@
 {{ super() }}
 
 <style>
+  :root {
+    --md-stars-url: url(assets/images/stars-black.svg);
+    --md-stars-opacity: .08;
+  }
+
+  [data-md-color-scheme="slate"] {
+    --md-stars-url: url(assets/images/stars-white.svg);
+    --md-stars-opacity: .08;
+  }
+
   .md-main {
     position: relative;
+    text-shadow: 0px 0px 1px var(--md-default-fg-color--lightest);
   }
 
   .md-main:before {
@@ -18,8 +29,8 @@
     height: 100%;
     display: block;
     z-index: -10;
-    opacity: .08;
-    background-image: url(assets/images/stars-black.svg);
+    opacity: var(--md-stars-opacity);
+    background-image: var(--md-stars-url);
   }
 
   .md-main__inner.md-grid {
@@ -37,12 +48,6 @@
     align-self: center;
   }
 
-  @media screen and (prefers-color-scheme: dark) {
-    .md-main:before {
-      opacity: .02;
-      background-image: url(assets/images/stars-white.svg);
-    }
-  }
 </style>
 {% endblock %}
 
