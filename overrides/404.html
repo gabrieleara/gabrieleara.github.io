@@ -1,0 +1,54 @@
+{% extends "main.html" %}
+
+{% block styles %}
+
+{{ super() }}
+
+<style>
+  .md-main {
+    position: relative;
+  }
+
+  .md-main:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: -10;
+    opacity: .08;
+    background-image: url(assets/images/stars-black.svg);
+  }
+
+  .md-main__inner.md-grid {
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 0; */
+    /* width: 100%; */
+    height: 100%;
+    align-content: center;
+  }
+
+  .md-content {
+    flex-grow: 1;
+    flex-shrink: 0;
+    align-self: center;
+  }
+
+  @media screen and (prefers-color-scheme: dark) {
+    .md-main:before {
+      opacity: .02;
+      background-image: url(assets/images/stars-white.svg);
+    }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<h1>404 - Uh oh... are you lost?</h1>
+<p>You must have taken a wrong turn! There's nothing but the stars here...</p>
+
+{% endblock %}

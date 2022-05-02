@@ -1,5 +1,7 @@
 ---
 template: publication.html
+hide:
+  - toc
 title: Bachelor Thesis
 pubdata:
   type: thesis

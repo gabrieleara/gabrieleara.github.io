@@ -1,5 +1,5 @@
 site_name: Gabriele Ara is an Embedded Engineer
-copyright: Copyright &copy; 2021 Gabriele Ara
+copyright: Copyright &copy; 2022 Gabriele Ara
 
 # nav:
 #   - Section:
@@ -60,7 +60,7 @@ theme:
 
   features:
     - navigation.instant
-    - navigation.tracking # eventually it will work
+    - navigation.tracking
     - navigation.tabs
     - navigation.sections
     - navigation.expand

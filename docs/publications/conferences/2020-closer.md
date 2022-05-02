@@ -1,5 +1,7 @@
 ---
 template: publication.html
+hide:
+  - toc
 title: CLOSER 2020 ⭐
 pubdata:
   type: conference

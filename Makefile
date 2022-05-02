@@ -4,4 +4,4 @@ build:
 	mkdocs build
 
 serve:
-	mkdocs serve
+	mkdocs serve --watch-theme

@@ -1,5 +1,7 @@
 ---
 template: publication.html
+hide:
+  - toc
 title: Master Thesis
 pubdata:
   type: thesis

@@ -1,5 +1,8 @@
 {
     "editor.tabSize": 2,
+    "yaml.schemas": {
+        "https://squidfunk.github.io/mkdocs-material/schema.json": "mkdocs.yml"
+    },
     // "html.format.unformatted": "",
     // "html.format.contentUnformatted": "",
     // "html.format.extraLiners": "",

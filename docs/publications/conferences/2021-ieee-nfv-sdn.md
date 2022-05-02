@@ -1,5 +1,7 @@
 ---
 template: publication.html
+hide:
+  - toc
 title: IEEE NFV-SDN 2021
 pubdata:
   type: conference
