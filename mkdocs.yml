@@ -2,7 +2,7 @@ site_name: Gabriele Ara, Computer Engineer and PhD
 copyright: Copyright &copy; 2022 Gabriele Ara
 
 nav:
-  - curriculum.html:
+  - curriculum.html
 
 markdown_extensions:
   # Python Markdown
