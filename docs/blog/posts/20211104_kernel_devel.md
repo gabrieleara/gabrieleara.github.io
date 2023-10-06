@@ -1,5 +1,7 @@
 ---
 date: 2021-11-04
+authors:
+  - gabrieleara
 ---
 
 # Linux kernel development in a containerized environment using VS Code

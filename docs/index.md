@@ -69,7 +69,7 @@ description:
 }
 </style>
 
-Hello! I am Gabriele Ara.
+<!-- Hello! I am Gabriele Ara. -->
 
 <figure id="about-profile">
   <div class="square">
