@@ -67,6 +67,12 @@ description:
     text-align: center;
   }
 }
+
+.md-sidebar.md-sidebar--primary,
+.md-sidebar.md-sidebar--secondary {
+  display: none;
+}
+
 </style>
 
 <!-- Hello! I am Gabriele Ara. -->
