@@ -1,15 +1,15 @@
 site_name: Gabriele Ara, Computer Engineer and PhD
 copyright: Copyright &copy; 2022 Gabriele Ara
 
-nav:
-  - Gabriele Ara:
-    - index.html
-  - Resume:
-      - curriculum.html
-  - Publications:
-      - publications/index.html
-  - Blog:
-      - blog/index.html
+# nav:
+  # - Gabriele Ara:
+  #   - index.html
+  # - Resume:
+  #     - curriculum.html
+  # - Publications:
+  #     - publications/index.html
+  # - Blog:
+  #     - blog/index.html
 
 markdown_extensions:
   # Python Markdown
