@@ -1,8 +1,14 @@
+---
+date: 2023-10-06
+---
+
 # Linux kernel development in a containerized environment using VS Code
 
 This short guide will let you create your own containerized environment to
 develop and tinker with the Linux kernel without having to install any
 particular software/tool on your machine that you may not already have.
+
+<!-- more -->
 
 ## Requirements
 

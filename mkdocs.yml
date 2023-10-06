@@ -1,12 +1,8 @@
 site_name: Gabriele Ara, Computer Engineer and PhD
 copyright: Copyright &copy; 2022 Gabriele Ara
 
-# nav:
-#   - Section:
-#     - section/index.md
-#     - Page 1: section/page-1.md
-#     ...
-#     - Page n: section/page-n.md
+nav:
+  - curriculum.html:
 
 markdown_extensions:
   # Python Markdown
@@ -62,13 +58,17 @@ theme:
     - navigation.instant
     - navigation.tracking
     - navigation.tabs
+    - navigation.path
     - navigation.sections
     - navigation.expand
     - navigation.indexes
     - navigation.top
     - search.suggest
     - search.highlight
-    # - search.share
+    # TODO: blog
+    - meta
+    - blog
+    - search.share
 
   palette:
     # Light Theme
