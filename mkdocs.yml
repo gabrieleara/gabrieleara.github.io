@@ -49,6 +49,8 @@ plugins:
   - search
   # - social
   # - tags
+  - meta
+  - blog
   - git-revision-date-localized:
       type: iso_date
       enable_creation_date: true
@@ -72,9 +74,6 @@ theme:
     - navigation.top
     - search.suggest
     - search.highlight
-    # TODO: blog
-    - meta
-    - blog
     - search.share
 
   palette:
