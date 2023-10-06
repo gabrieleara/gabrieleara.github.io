@@ -49,7 +49,7 @@ plugins:
   - search
   # - social
   # - tags
-  - meta
+  # - meta
   - blog
   - git-revision-date-localized:
       type: iso_date
