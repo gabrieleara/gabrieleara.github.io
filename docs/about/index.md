@@ -2,7 +2,7 @@
 title: About me
 description: Brief summary of my life
 pages:
-  - Gabriele Ara: /index
+  - Gabriele Ara: /
   - About:        /about
   - Resume:       /curriculum.html
   - Publications: /publications
@@ -31,7 +31,7 @@ In high school I learned the basics of programming, a few programming languages,
 
 ### Bachelor years
 
-After that, I enrolled in [University of Pisa](http://www.unipi.it) (Italy) to obtain a Bachelor Degree in [Computer Engineering](http://www.unipi.it/index.php/lauree/corso/10276). During my bachelor years I expanded my knowledge of computer science, along with other engineering areas. In particular I learned about computer architectures, system programming, industrial automation and control systems.
+After that, I enrolled in [University of Pisa](http://www.unipi.it) (Italy) to obtain a Bachelor Degree in [Computer Engineering](http://www.unipi.it/.php/lauree/corso/10276). During my bachelor years I expanded my knowledge of computer science, along with other engineering areas. In particular I learned about computer architectures, system programming, industrial automation and control systems.
 
 For my bachelor's thesis, I worked on a system for the generation of dynamic and interactive crisis maps. This work, along with my weighted average grades of over 29/30, granted me a final graduation mark of 110 cum laude/110, in September, 2016.
 
