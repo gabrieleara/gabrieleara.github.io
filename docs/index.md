@@ -1,9 +1,9 @@
 ---
 title: Gabriele Ara
 description:
-hide:
-  - navigation
-  - toc
+# hide:
+#   - navigation
+#   - toc
 ---
 
 <style>
