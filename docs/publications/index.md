@@ -26,7 +26,11 @@ Following is my list of publications, divided into publication types.
         const destination = document.getElementById('publist')
         const sections = document.querySelectorAll('li.md-nav__item--section');
         sections.forEach(section => {
-            const label_elem = section.querySelector('label.md-nav__link').querySelector('.md-ellipsis');
+            const outer_elem = section.querySelector('label.md-nav__link')
+            if (!outer_elem)
+                return;
+
+            const label_elem = outer_elem.querySelector('.md-ellipsis');
             if(!label_elem || !label_elem.firstChild)
                 return;
 
