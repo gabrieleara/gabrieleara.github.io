@@ -75,7 +75,7 @@ Hello! I am Gabriele Ara.
   <figcaption class='caption'>A nice picture of me</figcaption>
 </figure>
 
-## I'm looking for a new occupation
+<!-- ## I'm looking for a new occupation -->
 
 <a class='md-button md-button--primary upper' href='curriculum.html'>
   Check out my Resume
