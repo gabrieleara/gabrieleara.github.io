@@ -28,19 +28,24 @@ For my master's program I joined [Scuola Superiore Sant'Anna](http://www.santann
 
 For my master thesis, I developed a framework for evaluating the performance of various virtual network switching solutions for Network Function Virtualization (NFV)-like scenarios. You can read my master thesis (along with the papers I published on said work) on my [publications](/publications) page. I then graduated with a final mark of 110 cum laude/110 in October, 2019.
 
+
+### Doctorate years
+
+From October 2019 to December 2022, I've been a Ph.D. Student at [Scuola Superiore Sant'Anna](http://www.santannapisa.it) in Pisa, Italy, in the [Real-Time Systems Laboratory (ReTiS Lab)](http://retis.santannapisa.it) under the supervision of [Prof. Tommaso Cucinotta](http://retis.sssup.it/~tommaso). During this time, I also spent over 6 months abroad in Switzerland, at the [Integrated Systems Laboratory](https://iis.ee.ethz.ch) of [ETH Zürich](https://ethz.ch), under the supervision of [Prof. Luca Benini](https://ee.ethz.ch/the-department/people-a-z/person-detail.luca-benini.html).
+
+My research activity focused in [Emerging Digital Technologies](http://www.santannapisa.it/en/education/international-phd-course-emerging-digital-technologies) and Embedded Systems. In particular, I conduct research on the energy consumption of real-time tasks on embedded platforms, like ARM-based devices running Linux.
+
+Check out my [publications](/publications) page for some of the works I contributed to. My Ph.D. Thesis has already been approved, but it is currently under embargo for a couple of years, due to some topics missing a publication (yet!).
+
 ## Current Occupation
 
-From October 2019, I'm a Ph.D. Student at [Scuola Superiore Sant'Anna](http://www.santannapisa.it) in Pisa, Italy. I proudly work in the [Real-Time Systems Laboratory (ReTiS Lab)](http://retis.santannapisa.it) under the supervision of [Prof. Tommaso Cucinotta](http://retis.sssup.it/~tommaso).
-
-My research activity focuses in [Emerging Digital Technologies](http://www.santannapisa.it/en/education/international-phd-course-emerging-digital-technologies) and Embedded Systems. In particular, I conduct research on the energy consumption of real-time tasks on embedded platforms, like ARM-based devices running Linux.
-
-Check out my [publications](/publications) page for some of the works I contributed to.
+From January 2023 I am a Postdoctoral Researcher at the ReTiS Lab, following up on the topics that I worked on during my Ph.D. and collaborating to an European Project, [AMPERE](https://ampere-euproject.eu).
 
 ## Prior Work Experience
 
 ### Authorship of Books and Book Chapters
 
-On "odd" years (2013, 2015, 2017, 2019) I typically work as an independent contract author for [Zanichelli editore](http://www.zanichelli.it) (Italy).
+On "odd" years (2013, 2015, 2017, 2019, 2021) I typically work as an independent contract author for [Zanichelli editore](http://www.zanichelli.it) (Italy).
 In the past I collaborated this way to a number of projects, authoring some chapters for high-school textbooks and manuals regarding the essentials of mobile application development for Android OS. Refer to my [publications list](/publications) for the full list of my contributions.
 
 ### High-School Teaching and Tutoring

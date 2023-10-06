@@ -90,6 +90,8 @@
 {% set whatisthis = "paper" %}
 {% elif page.meta.pubdata.type == 'bookchapter' %}
 {% set whatisthis = "book chapter" %}
+{% elif page.meta.pubdata.type == 'book' %}
+{% set whatisthis = "book" %}
 {% elif page.meta.pubdata.type == 'thesis' %}
 {% set whatisthis = "thesis" %}
 {% endif %}

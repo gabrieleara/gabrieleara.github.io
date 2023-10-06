@@ -83,7 +83,7 @@ Ever since I was little, I was fascinated by everything that revolved around com
 
 ## Current occupation
 
-Currently, I'm a Ph.D. Student at [Scuola Superiore Sant'Anna](http://www.santannapisa.it) in Pisa, Italy. I proudly work in the [Real-Time Systems Laboratory (ReTiS Lab)](http://retis.santannapisa.it) under the supervision of [Prof. Tommaso Cucinotta](http://retis.sssup.it/~tommaso).
+Currently, I'm a Postdoctoral Researcher at [Scuola Superiore Sant'Anna](http://www.santannapisa.it) in Pisa, Italy. I proudly work in the [Real-Time Systems Laboratory (ReTiS Lab)](http://retis.santannapisa.it) under the supervision of [Prof. Tommaso Cucinotta](http://retis.sssup.it/~tommaso).
 
 My research activity focuses in [Emerging Digital Technologies](http://www.santannapisa.it/en/education/international-phd-course-emerging-digital-technologies) and Embedded Systems. In particular, I conduct research on the energy consumption of real-time tasks on embedded platforms, like ARM-based devices running Linux.
 
