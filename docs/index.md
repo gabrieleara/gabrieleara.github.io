@@ -7,7 +7,7 @@ description:
 pages:
   - Gabriele Ara: /
   - About:        /about
-  - Resume:       /curriculum.html
+  - Resume:       /curriculum
   - Publications: /publications
   - Blog:         /blog
 ---
@@ -92,7 +92,7 @@ pages:
 
 <!-- ## I'm looking for a new occupation -->
 
-<a class='md-button md-button--primary upper' href='curriculum.html'>
+<a class='md-button md-button--primary upper' href='curriculum'>
   Check out my Resume
 </a>
 

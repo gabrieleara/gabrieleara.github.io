@@ -4,7 +4,7 @@ description: Brief summary of my life
 pages:
   - Gabriele Ara: /
   - About:        /about
-  - Resume:       /curriculum.html
+  - Resume:       /curriculum
   - Publications: /publications
   - Blog:         /blog
 ---
