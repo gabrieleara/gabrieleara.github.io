@@ -17,7 +17,13 @@ Following is my list of publications, divided into publication types.
         const destination = document.getElementById('publist')
         const sections = document.querySelectorAll('li.md-nav__item--section');
         sections.forEach(section => {
-            const label = section.querySelector('label.md-nav__link').firstChild.nodeValue.trim();
+            const label_elem = section.querySelector('label.md-nav__link').querySelector('.md-ellipsis');
+            if(!label_elem || !label_elem.firstChild)
+                return;
+
+            const label = label_elem.firstChild.nodeValue.trim();
+            if (label == 'Posts')
+                return;
 
             const section_title = document.createElement('h2')
             section_title.appendChild(document.createTextNode(label));
@@ -26,7 +32,8 @@ Following is my list of publications, divided into publication types.
             const elements = section.querySelectorAll('li.md-nav__item');
             elements.forEach(el => {
                 const link = el.querySelector('a[href]');
-                const text = link.firstChild.nodeValue.trim()
+                const link_span = link.querySelector('.md-ellipsis');
+                const text = link_span.firstChild.nodeValue.trim()
                 const url = link.href.trim()
 
                 const link_node = document.createElement('a');
