@@ -3,6 +3,13 @@ title: About me
 description: Brief summary of my life
 ---
 
+<style>
+.md-sidebar.md-sidebar--primary,
+.md-sidebar.md-sidebar--secondary {
+  display: none;
+}
+</style>
+
 # About me
 
 This page contains information pertaining my past and current work and
