@@ -35,7 +35,7 @@ Following is my list of publications, divided into publication types.
                 return;
 
             const label = label_elem.firstChild.nodeValue.trim();
-            if (label == 'Posts')
+            if (label == 'Posts' || label == 'Archive')
                 return;
 
             const section_title = document.createElement('h2')
