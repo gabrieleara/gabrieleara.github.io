@@ -1,3 +1,12 @@
+---
+pages:
+  - Gabriele Ara: /index
+  - About:        /about
+  - Resume:       /curriculum.html
+  - Publications: /publications
+  - Blog:         /blog
+---
+
 # List of Publications
 
 Following is my list of publications, divided into publication types.
