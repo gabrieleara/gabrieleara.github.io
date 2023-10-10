@@ -140,22 +140,31 @@ a {
 }
 
 .mainnav ul {
-    display: inline-flex;
-    flex-flow: row wrap;
     width: 100%;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: center;
-    gap: .5em;
-    row-gap: 1em;
+    display: inline-grid;
+    grid-template-columns: repeat(2, minmax(17em, 50%));
+    grid-auto-flow: row;
+    place-items: center left;
+
+    gap: 1em .5em;
     margin: 1em 0em;
     list-style: none;
     font-size: .9em;
 }
 
+@media screen and (max-width: 600px) {
+    .mainnav ul {
+        grid-template-columns: 17em;
+        justify-content: space-around;
+    }
+
+    .mainnav li {
+        display: inline;
+    }
+}
+
 .mainnav li {
     display: block;
-    width: 49.5%;
     height: 1.5em;
 }
 
