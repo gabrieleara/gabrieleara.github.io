@@ -571,6 +571,10 @@ a.colored {
     .download {
         display: none;
     }
+
+    .entry.extra {
+        display: none;
+    }
 }
 
 .download {
