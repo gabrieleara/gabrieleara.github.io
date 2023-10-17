@@ -333,12 +333,46 @@ a {
     margin-top: 2.5em;
 }
 
-.entry .heading {
+.entry .heading,
+.entry .languages-table {
     position: relative;
     width: 100%;
     overflow: auto;
     --size-heading: 1.2em;
     margin-bottom: .75em;
+}
+
+.entry .heading {
+    display: grid;
+    grid-template-areas:
+        "position date"
+        "employer city";
+
+    /* First column will fit everything, second one will not shrink */
+    grid-template-columns: minmax(0px, 1fr) auto;
+    grid-template-rows: auto;
+    column-gap: .5em;
+
+    align-items: baseline;
+    justify-items: left;
+}
+
+.entry .heading .title {
+    grid-area: position;
+}
+
+.entry .heading .timing {
+    grid-area: date;
+    /* line-height: 1.45em; */
+}
+
+.entry .heading .employer {
+    grid-area: employer;
+    /* line-height: 1.05em; */
+}
+
+.entry .heading .location {
+    grid-area: city;
 }
 
 .table {
@@ -361,19 +395,97 @@ a {
 }
 
 .entry .heading .right {
-    text-align: right;
+    justify-self: right;
     font-style: italic;
     white-space: nowrap;
     color: var(--accent-color-dark);
 }
 
-.entry .heading .lang-right {
+.entry .languages-table .lang-right {
     font-style: italic;
     color: var(--accent-color-dark);
 }
 
 .entry .heading .title {
     font-weight: bold;
+}
+
+/* I have to repeat because pagedjs doesn't support media rules with parentheses */
+@media screen and (min-width: 700px) and (max-width: 800px) {
+    .entry .heading {
+        grid-template-areas:
+            "position position"
+            "employer employer"
+            "city     date"
+        ;
+
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+
+    .entry .heading .employer {
+        margin-bottom: .5em;
+    }
+
+    .entry .heading .timing {
+        text-align: right;
+        line-height: 1em;
+    }
+
+    .entry .heading .location {
+        text-align: left;
+        line-height: 1em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+        .entry .heading {
+            grid-template-areas: "position position"
+            "employer employer"
+            "city     date"
+            ;
+
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+        }
+
+        .entry .heading .employer {
+            margin-bottom: .5em;
+        }
+
+        .entry .heading .timing {
+            text-align: right;
+            line-height: 1em;
+        }
+
+        .entry .heading .location {
+            text-align: left;
+            line-height: 1em;
+        }
+    }
+
+@media screen and (max-width: 360px) {
+    .entry .heading {
+        grid-template-areas:
+            "position"
+            "employer"
+            "city"
+            "date"
+        ;
+
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+
+    .entry .heading .employer {
+        margin-bottom: .5em;
+    }
+
+    .entry .heading .timing,
+    .entry .heading .location {
+        text-align: left;
+        line-height: 1em;
+    }
 }
 
 /*
